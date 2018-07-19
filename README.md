@@ -1,4 +1,4 @@
-# matrix-google-cloud-next-demo
+# matrix-google-cloud-next-18-demo
 MATRIX Labs demo for the Google Cloud Next ’18 Conference
 
 # Overview
