@@ -35,7 +35,7 @@ function setServo(pin, angle){
 module.exports = {
   set: function(pin,angle){setServo(pin, angle)},
   useZigbee: function(callback, zigbeeFunction){luxoUpAnimation(callback, zigbeeFunction)},
-  removeZigbee: function(callback){luxoDownAnimation(callback)}
+  removeZigbee: function(callback, zigbeeFunction){luxoDownAnimation(callback, zigbeeFunction)}
 }
 
 // FUNCTIONS \\
@@ -51,7 +51,6 @@ function restPosition(callback, adjustForBulb = true){
     // Lift each servo above pin[1]
     setTimeout(function(){
       // Begin moving to
-      setServo(pins[0],108);
       setServo(pins[2],20);
       setServo(pins[4],176);
       // Adjust wrist if needed(avoids hitting light bulb)
@@ -64,8 +63,11 @@ function restPosition(callback, adjustForBulb = true){
       // Lift from base
       setTimeout(function(){
         setServo(pins[1],126);
-        // Callback after specified seconds (if defined)
-        setTimeout(function(){if(callback){callback()};},1000);
+        setTimeout(function(){
+          setServo(pins[0],108);
+          // Callback after specified seconds (if defined)
+          setTimeout(function(){if(callback){callback()};},1000);
+        },300);
       },500);
     },200);
   },300);
@@ -112,11 +114,16 @@ function luxoUpAnimation(callback, zigbeeFunction){
 }
 
 // - Animation to place light bulb on the ground and reset
-function luxoDownAnimation(callback){
+function luxoDownAnimation(callback, zigbeeFunction){
   // Set to grabbing position
   setServo(pins[2],164);
   setServo(pins[3],7);
   setServo(pins[4],170);
+
+  // Turn off Zigbee bulb
+  if(zigbeeFunction){zigbeeFunction()};
+  
+  // Finish setting to grabbing position
   setTimeout(()=>{
     setServo(pins[0],108);
     setServo(pins[1],126);
