@@ -45,8 +45,8 @@ function colorSetEvent(colorName){
 }
 
 // Servo dashboard sliders
-matrix.on('servo0', function(payload){servoControl.set(1, payload.value);});
-matrix.on('servo1', function(payload){servoControl.set(3, payload.value);});
+matrix.on('servo0', function(payload){servoControl.set(1, 180-payload.value);});
+matrix.on('servo1', function(payload){servoControl.set(3, 180-payload.value);});
 matrix.on('servo2', function(payload){servoControl.set(5, payload.value);});
 matrix.on('servo3', function(payload){servoControl.set(7, payload.value);});
 matrix.on('servo4', function(payload){servoControl.set(9, payload.value);});
@@ -71,10 +71,9 @@ matrix.on('removeZigbee', function(payload){
     armInUse = true;// Update boolean
     // Put down Zigbee bulb
     servoControl.removeZigbee(function(){
-      zigbeeSimple.lightsOff();// Turn Zigbee on
       lastArmAction = 'removeZigbee';// Update boolean
       armInUse = false;// Update boolean
-    });
+    }, zigbeeSimple.lightsOff);
   }
 });
 // Toggle Zigbee bulb
