@@ -49,7 +49,7 @@ Creating your own Google Actions is required for creating the custom commands us
     - You will be required
 - Fulfillment
     - Enable Webhook
-    - Have the URL pointed to your Heroku app. (ex. https://YOUR_APP.herokuapp.com/matrix)
+    - Have the URL pointed to your Heroku app. (example link: https://YOUR_APP.herokuapp.com/matrix)
 
 ## Robot Arm
 The robot arm used in this demo was built using the following materials:
