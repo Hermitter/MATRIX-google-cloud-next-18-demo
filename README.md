@@ -1,18 +1,18 @@
 # Overview
 This repository is only meant to be used as a reference for the code written in this demo. Below, I will go over what each folder/file does and the general requirements for this setup. This demo enables you to control the mATRIX Creator and a robot arm through the use of Google Assistant and the MATRIX Dashboard.
 
-## demo_start.sh
+## [demo_start.sh](https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/demo_start.sh)
 Calling this folder in your Raspberry Pi's `etc/rc.local` file as `demo_start.sh &` will, on boot, start MATRIX CORE, MATRIX OS, and Google Assistant.
 
-## mos_app
+## [mos_app](https://github.com/Hermitter/matrix-google-cloud-next-18-demo/tree/master/mos_core_libs)
 Here is where the MATRIX OS app for this project is located. This app controls all the MATRIX function being called through the [MATRIX Dashboard](dash.matrix.one) and Google Assistant. Note that you will need to edit app.js to point to your Heroku App.
 
-## mos_core_libs
+## [mos_core_libs](https://github.com/Hermitter/matrix-google-cloud-next-18-demo/tree/master/mos_app)
 Due to MATRIX OS, and MATRIX CORE being separate development layers, the servo and Zigbee implementations are added here as libraries written in MATRIX CORE.
 
 Use `npm install` inside this folder to download the dependencies.
 
-## heroku_dyno
+## [heroku_dyno](heroku_dyno)
 The code for the Heroku app is written here. This acts as a middle man to catch Google Assistant requests and send them to the MATRIX OS app. The main benefit of using Heroku was being able to borrow the SSL certificate that Google requires for receiving  Google Assistant requests.
 
 
