@@ -1,8 +1,5 @@
-# matrix-google-cloud-next-18-demo
-MATRIX Labs demo for the Google Cloud Next ’18 Conference
-
 # Overview
-This repository is only meant to be used as a reference for the code written in this demo. Below, I will go over what each folder/file does and the general requirements for this setup.
+This repository is only meant to be used as a reference for the code written in this demo. Below, I will go over what each folder/file does and the general requirements for this setup. This demo enables you to control the mATRIX Creator and a robot arm through the use of Google Assistant and the MATRIX Dashboard.
 
 ## demo_start.sh
 Calling this folder in your Raspberry Pi's `etc/rc.local` file as `demo_start.sh &` will, on boot, start MATRIX CORE, MATRIX OS, and Google Assistant.
