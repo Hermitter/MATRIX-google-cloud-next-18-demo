@@ -29,7 +29,7 @@ Installing and setting up MATRIX OS is required. The link below will direct you 
 https://matrix-io.github.io/matrix-documentation/matrix-os/getting-started/
 
 ## MATRIX CORE
-MATRIX CORE installation and Javascript setup will be required in order to use the servo and Zigbee implementations. Below is the link to the getting started page. Keep in mind that some of MATRIX CORE files were calibrated to better support the servos in this demo.
+MATRIX CORE installation and Javascript setup will be required in order to use the servo and Zigbee implementations. Below is the link to the getting started page. Keep in mind that some of MATRIX CORE files were calibrated to better support the servos in this demo. Note that the [registerZigbee.js](https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/mos_core_libs/registerZigbee.js) file must be called seperatly in order for you to register any Zigbee device. Only do this once for when you want to register your Zigbee device.
 
 https://matrix-io.github.io/matrix-documentation/matrix-core/getting-started/
 
