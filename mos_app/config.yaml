@@ -1,0 +1,108 @@
+configVersion: 2
+
+name: mos_app
+description: handle Google Assistant requests
+keywords: Google Assistant
+shortName: GoogleAssistant
+displayName: Google Assistant
+
+# Screens
+screens:
+  - - currentColor
+  - - redSlider
+    - greenSlider
+    - blueSlider
+  - - servoControl0
+    - servoControl1
+    - servoControl2
+  - - servoControl3
+    - servoControl4
+    - servoControl5
+  - - useZigbee
+    - removeZigbee
+    - toggleZigbee
+
+# Datatypes
+dataTypes:
+  color:
+    colorText: string
+
+# Widgets
+widgets:
+  # Zigbee
+  toggleZigbee:
+    control: button
+    event: toggleZigbee
+    value: use
+    label: Toggle Zigbee Light
+  useZigbee:
+    control: button
+    event: useZigbee
+    value: use
+    label: Luxo On
+  removeZigbee:
+    control: button
+    event: removeZigbee
+    value: use
+    label: Luxo Off
+  # Servo
+  servoControl0:
+    control: range
+    event: servo0
+    min: 0
+    max: 180
+    label: Shoulder Rotate
+  servoControl1:
+    control: range
+    event: servo1
+    min: 0
+    max: 180
+    label: Shoulder Angle
+  servoControl2:
+    control: range
+    event: servo2
+    min: 20
+    max: 165
+    label: Elbow
+  servoControl3:
+    control: range
+    event: servo3
+    min: 0
+    max: 165
+    label: Wrist Angle
+  servoControl4:
+    control: range
+    event: servo4
+    min: 0
+    max: 180
+    label: Wrist Rotate
+  servoControl5:
+    control: range
+    event: servo5
+    min: 30
+    max: 100
+    label: Claw
+  # Color
+  currentColor:
+    display: label
+    type: color
+    key: colorText
+    label: LED Status
+  redSlider:
+    control: range
+    event: redInput
+    min: 0
+    max: 255
+    label: Red
+  greenSlider:
+    control: range
+    event: greenInput
+    min: 0
+    max: 255
+    label: Green
+  blueSlider:
+    control: range
+    event: blueInput
+    min: 0
+    max: 255
+    label: Blue
