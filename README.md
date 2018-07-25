@@ -1,6 +1,6 @@
 # Overview
 
-<img src="https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/dashboard_example.png?raw=true">
+<img width=700 src="https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/dashboard_example.png?raw=true">
 
 This repository is only meant to be used as a reference for the code written in this demo. Below, I will go over what each folder/file does and the general requirements for this setup. This demo enables you to control the MATRIX Creator and a robot arm through the use of Google Assistant and the MATRIX Dashboard.
 
