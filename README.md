@@ -48,7 +48,7 @@ Creating your own Google Actions is required for creating the custom commands us
 - Intents 
     - The fulfillment in your intents must be "Enable webhook call for this intent."
 - Entities
-    - You will be required
+    - You will be required to create custom words to use for your intents.
 - Fulfillment
     - Enable Webhook
     - Have the URL pointed to your Heroku app. (example link: https://YOUR_APP.herokuapp.com/matrix)
