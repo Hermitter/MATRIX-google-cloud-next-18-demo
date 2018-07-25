@@ -1,8 +1,10 @@
 # Overview
-
 <img width=700 src="https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/dashboard_example.png?raw=true">
 
 This repository is only meant to be used as a reference for the code written in this demo. Below, I will go over what each folder/file does and the general requirements for this setup. This demo enables you to control the MATRIX Creator and a robot arm through the use of Google Assistant and the MATRIX Dashboard.
+
+Tweet & video from @ArmEmbedded: https://twitter.com/ArmEmbedded/status/1021929298985410562/video/1
+
 
 ## [demo_start.sh](https://github.com/Hermitter/matrix-google-cloud-next-18-demo/blob/master/demo_start.sh)
 Calling this file in your Raspberry Pi's `etc/rc.local` file as `demo_start.sh &` will, on boot, start MATRIX CORE, MATRIX OS, and Google Assistant.
